@@ -1,0 +1,392 @@
+[
+  {
+    "ac_no": 32,
+    "assembly": "Karandighi",
+    "file": "data/assemblies/32-karandighi.json"
+  },
+  {
+    "ac_no": 53,
+    "assembly": "Sujapur",
+    "file": "data/assemblies/53-sujapur.json"
+  },
+  {
+    "ac_no": 60,
+    "assembly": "Sagardighi",
+    "file": "data/assemblies/60-sagardighi.json"
+  },
+  {
+    "ac_no": 61,
+    "assembly": "Lalgola",
+    "file": "data/assemblies/61-lalgola.json"
+  },
+  {
+    "ac_no": 62,
+    "assembly": "Bhagwangola",
+    "file": "data/assemblies/62-bhagwangola.json"
+  },
+  {
+    "ac_no": 63,
+    "assembly": "Raninagar",
+    "file": "data/assemblies/63-raninagar.json"
+  },
+  {
+    "ac_no": 64,
+    "assembly": "Murshidabad",
+    "file": "data/assemblies/64-murshidabad.json"
+  },
+  {
+    "ac_no": 66,
+    "assembly": "Khargram",
+    "file": "data/assemblies/66-khargram.json"
+  },
+  {
+    "ac_no": 70,
+    "assembly": "Rejinagar",
+    "file": "data/assemblies/70-rejinagar.json"
+  },
+  {
+    "ac_no": 73,
+    "assembly": "Hariharpara",
+    "file": "data/assemblies/73-hariharpara.json"
+  },
+  {
+    "ac_no": 75,
+    "assembly": "Domkal",
+    "file": "data/assemblies/75-domkal.json"
+  },
+  {
+    "ac_no": 76,
+    "assembly": "Jalangi",
+    "file": "data/assemblies/76-jalangi.json"
+  },
+  {
+    "ac_no": 77,
+    "assembly": "Karimpur",
+    "file": "data/assemblies/77-karimpur.json"
+  },
+  {
+    "ac_no": 78,
+    "assembly": "Tehatta",
+    "file": "data/assemblies/78-tehatta.json"
+  },
+  {
+    "ac_no": 79,
+    "assembly": "Palasipara",
+    "file": "data/assemblies/79-palasipara.json"
+  },
+  {
+    "ac_no": 80,
+    "assembly": "Kaliganj",
+    "file": "data/assemblies/80-kaliganj.json"
+  },
+  {
+    "ac_no": 82,
+    "assembly": "Chapra",
+    "file": "data/assemblies/82-chapra.json"
+  },
+  {
+    "ac_no": 82,
+    "assembly": "Chapra",
+    "file": "data/assemblies/82-chapra.json"
+  },
+  {
+    "ac_no": 98,
+    "assembly": "Swarupnagar",
+    "file": "data/assemblies/98-swarupnagar.json"
+  },
+  {
+    "ac_no": 99,
+    "assembly": "Baduria",
+    "file": "data/assemblies/99-baduria.json"
+  },
+  {
+    "ac_no": 101,
+    "assembly": "Ashoknagar",
+    "file": "data/assemblies/101-ashoknagar.json"
+  },
+  {
+    "ac_no": 102,
+    "assembly": "Amdanga",
+    "file": "data/assemblies/102-amdanga.json"
+  },
+  {
+    "ac_no": 107,
+    "assembly": "Noapara",
+    "file": "data/assemblies/107-noapara.json"
+  },
+  {
+    "ac_no": 109,
+    "assembly": "Khardaha",
+    "file": "data/assemblies/109-khardaha.json"
+  },
+  {
+    "ac_no": 110,
+    "assembly": "DumdumUttar",
+    "file": "data/assemblies/110-dumdumuttar.json"
+  },
+  {
+    "ac_no": 111,
+    "assembly": "Panihati",
+    "file": "data/assemblies/111-panihati.json"
+  },
+  {
+    "ac_no": 112,
+    "assembly": "Kamarhati",
+    "file": "data/assemblies/112-kamarhati.json"
+  },
+  {
+    "ac_no": 113,
+    "assembly": "Baranagar",
+    "file": "data/assemblies/113-baranagar.json"
+  },
+  {
+    "ac_no": 114,
+    "assembly": "Dumdum",
+    "file": "data/assemblies/114-dumdum.json"
+  },
+  {
+    "ac_no": 115,
+    "assembly": "RajarhatNewtown",
+    "file": "data/assemblies/115-rajarhatnewtown.json"
+  },
+  {
+    "ac_no": 117,
+    "assembly": "RajarhatGopalpur",
+    "file": "data/assemblies/117-rajarhatgopalpur.json"
+  },
+  {
+    "ac_no": 118,
+    "assembly": "Madhyamgram",
+    "file": "data/assemblies/118-madhyamgram.json"
+  },
+  {
+    "ac_no": 120,
+    "assembly": "Deganga",
+    "file": "data/assemblies/120-deganga.json"
+  },
+  {
+    "ac_no": 121,
+    "assembly": "Haroa",
+    "file": "data/assemblies/121-haroa.json"
+  },
+  {
+    "ac_no": 122,
+    "assembly": "Minakhan",
+    "file": "data/assemblies/122-minakhan.json"
+  },
+  {
+    "ac_no": 123,
+    "assembly": "Sandeshkhali",
+    "file": "data/assemblies/123-sandeshkhali.json"
+  },
+  {
+    "ac_no": 124,
+    "assembly": "BasirhatDakshin",
+    "file": "data/assemblies/124-basirhatdakshin.json"
+  },
+  {
+    "ac_no": 125,
+    "assembly": "BasirhatUttar",
+    "file": "data/assemblies/125-basirhatuttar.json"
+  },
+  {
+    "ac_no": 128,
+    "assembly": "Basanti",
+    "file": "data/assemblies/128-basanti.json"
+  },
+  {
+    "ac_no": 133,
+    "assembly": "Kulpi",
+    "file": "data/assemblies/133-kulpi.json"
+  },
+  {
+    "ac_no": 135,
+    "assembly": "Mandirbazar",
+    "file": "data/assemblies/135-mandirbazar.json"
+  },
+  {
+    "ac_no": 136,
+    "assembly": "Jaynagar",
+    "file": "data/assemblies/136-jaynagar.json"
+  },
+  {
+    "ac_no": 137,
+    "assembly": "BaruipurPurba",
+    "file": "data/assemblies/137-baruipurpurba.json"
+  },
+  {
+    "ac_no": 138,
+    "assembly": "CanningPaschim",
+    "file": "data/assemblies/138-canningpaschim.json"
+  },
+  {
+    "ac_no": 139,
+    "assembly": "CanningPurba",
+    "file": "data/assemblies/139-canningpurba.json"
+  },
+  {
+    "ac_no": 140,
+    "assembly": "BaruipurPaschim",
+    "file": "data/assemblies/140-baruipurpaschim.json"
+  },
+  {
+    "ac_no": 141,
+    "assembly": "MagrahatPurba",
+    "file": "data/assemblies/141-magrahatpurba.json"
+  },
+  {
+    "ac_no": 142,
+    "assembly": "MagrahatPaschim",
+    "file": "data/assemblies/142-magrahatpaschim.json"
+  },
+  {
+    "ac_no": 144,
+    "assembly": "Falta",
+    "file": "data/assemblies/144-falta.json"
+  },
+  {
+    "ac_no": 148,
+    "assembly": "Bhangar",
+    "file": "data/assemblies/148-bhangar.json"
+  },
+  {
+    "ac_no": 149,
+    "assembly": "Kasba",
+    "file": "data/assemblies/149-kasba.json"
+  },
+  {
+    "ac_no": 150,
+    "assembly": "Jadavpur",
+    "file": "data/assemblies/150-jadavpur.json"
+  },
+  {
+    "ac_no": 152,
+    "assembly": "Tollygunj",
+    "file": "data/assemblies/152-tollygunj.json"
+  },
+  {
+    "ac_no": 154,
+    "assembly": "BehalaPaschim",
+    "file": "data/assemblies/154-behalapaschim.json"
+  },
+  {
+    "ac_no": 155,
+    "assembly": "Maheshtala",
+    "file": "data/assemblies/155-maheshtala.json"
+  },
+  {
+    "ac_no": 169,
+    "assembly": "Bally",
+    "file": "data/assemblies/169-bally.json"
+  },
+  {
+    "ac_no": 173,
+    "assembly": "HowrahDakshin",
+    "file": "data/assemblies/173-howrahdakshin.json"
+  },
+  {
+    "ac_no": 174,
+    "assembly": "Sankrail",
+    "file": "data/assemblies/174-sankrail.json"
+  },
+  {
+    "ac_no": 175,
+    "assembly": "Panchla",
+    "file": "data/assemblies/175-panchla.json"
+  },
+  {
+    "ac_no": 176,
+    "assembly": "UluberiaPurba",
+    "file": "data/assemblies/176-uluberiapurba.json"
+  },
+  {
+    "ac_no": 181,
+    "assembly": "Amta",
+    "file": "data/assemblies/181-amta.json"
+  },
+  {
+    "ac_no": 183,
+    "assembly": "Jagatballavpur",
+    "file": "data/assemblies/183-jagatballavpur.json"
+  },
+  {
+    "ac_no": 184,
+    "assembly": "Domjur",
+    "file": "data/assemblies/184-domjur.json"
+  },
+  {
+    "ac_no": 185,
+    "assembly": "Uttarpara",
+    "file": "data/assemblies/185-uttarpara.json"
+  },
+  {
+    "ac_no": 186,
+    "assembly": "Sreerampur",
+    "file": "data/assemblies/186-sreerampur.json"
+  },
+  {
+    "ac_no": 189,
+    "assembly": "Chandannagar",
+    "file": "data/assemblies/189-chandannagar.json"
+  },
+  {
+    "ac_no": 192,
+    "assembly": "Pandua",
+    "file": "data/assemblies/192-pandua.json"
+  },
+  {
+    "ac_no": 194,
+    "assembly": "Chanditala",
+    "file": "data/assemblies/194-chanditala.json"
+  },
+  {
+    "ac_no": 209,
+    "assembly": "Haldia",
+    "file": "data/assemblies/209-haldia.json"
+  },
+  {
+    "ac_no": 210,
+    "assembly": "Nandigram",
+    "file": "data/assemblies/210-nandigram.json"
+  },
+  {
+    "ac_no": 261,
+    "assembly": "Raina",
+    "file": "data/assemblies/261-raina.json"
+  },
+  {
+    "ac_no": 262,
+    "assembly": "Jamalpur",
+    "file": "data/assemblies/262-jamalpur.json"
+  },
+  {
+    "ac_no": 263,
+    "assembly": "Monteshwar",
+    "file": "data/assemblies/263-monteshwar.json"
+  },
+  {
+    "ac_no": 269,
+    "assembly": "PurbasthaliUttar",
+    "file": "data/assemblies/269-purbasthaliuttar.json"
+  },
+  {
+    "ac_no": 276,
+    "assembly": "DurgapurPurba",
+    "file": "data/assemblies/276-durgapurpurba.json"
+  },
+  {
+    "ac_no": 279,
+    "assembly": "Jamuria",
+    "file": "data/assemblies/279-jamuria.json"
+  },
+  {
+    "ac_no": 291,
+    "assembly": "Rampurhat",
+    "file": "data/assemblies/291-rampurhat.json"
+  },
+  {
+    "ac_no": 292,
+    "assembly": "Hansan",
+    "file": "data/assemblies/292-hansan.json"
+  }
+]

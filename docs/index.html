@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>West Bengal Assembly Booth Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>West Bengal Assembly Booth Details</h1>
+    <p class="subtitle">
+      Select an Assembly, Panchayat, Municipality or Ward to view booth-level results.
+    </p>
+  </header>
+
+  <section class="filters">
+
+    <label>
+      Assembly
+      <select id="assemblySelect"></select>
+    </label>
+
+    <label>
+      Filter Type
+      <select id="modeSelect">
+        <option value="all">Full Assembly</option>
+        <option value="panchayat">Panchayat / GP</option>
+        <option value="municipality">Municipality / Ward</option>
+      </select>
+    </label>
+
+    <label>
+      Show
+      <select id="valueViewSelect">
+        <option value="actual">Actual Votes</option>
+        <option value="percent">Percentage Votes</option>
+      </select>
+    </label>
+
+    <label id="panchayatBox">
+      Panchayat / GP
+      <select id="panchayatSelect"></select>
+    </label>
+
+    <label id="municipalityBox">
+      Municipality
+      <select id="municipalitySelect"></select>
+    </label>
+
+    <label id="wardBox">
+      Ward
+      <select id="wardSelect"></select>
+    </label>
+
+  </section>
+
+  <section class="summary">
+    <p id="resultCount">Loading...</p>
+  </section>
+
+  <div class="top-scroll" id="topScroll">
+     <div class="top-scroll-inner" id="topScrollInner"></div>
+  </div>
+
+  <section class="table-wrapper" id="tableWrapper">
+    <table id="boothTable"></table>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
