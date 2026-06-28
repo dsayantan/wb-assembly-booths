@@ -85,11 +85,6 @@
     "file": "data/assemblies/82-chapra.json"
   },
   {
-    "ac_no": 82,
-    "assembly": "Chapra",
-    "file": "data/assemblies/82-chapra.json"
-  },
-  {
     "ac_no": 98,
     "assembly": "Swarupnagar",
     "file": "data/assemblies/98-swarupnagar.json"
@@ -158,6 +153,11 @@
     "ac_no": 118,
     "assembly": "Madhyamgram",
     "file": "data/assemblies/118-madhyamgram.json"
+  },
+  {
+    "ac_no": 119,
+    "assembly": "Barasat",
+    "file": "data/assemblies/119-barasat.json"
   },
   {
     "ac_no": 120,
