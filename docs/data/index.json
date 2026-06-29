@@ -335,6 +335,11 @@
     "file": "data/assemblies/152-tollygunj.json"
   },
   {
+    "ac_no": 153,
+    "assembly": "BehalaPurba",
+    "file": "data/assemblies/153-behalapurba.json"
+  },
+  {
     "ac_no": 154,
     "assembly": "BehalaPaschim",
     "file": "data/assemblies/154-behalapaschim.json"
