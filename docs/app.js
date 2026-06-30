@@ -214,7 +214,6 @@ function fillSelect(select, values, includeAll = true) {
     select.appendChild(option);
   });
 }
-
 function populateFilters() {
   fillSelect(panchayatSelect, uniqueValues(currentRecords, "_panchayat"));
   fillSelect(municipalitySelect, uniqueValues(currentRecords, "_municipality"));
@@ -246,6 +245,12 @@ function applyFilters() {
   const mode = modeSelect.value;
 
   let records = [...currentRecords];
+  let useExcelTotal = false;
+
+  if (mode === "all") {
+    // Full Assembly: use the last row from Excel/JSON as the Total row.
+    useExcelTotal = true;
+  }
 
   if (mode === "panchayat") {
     const panchayat = panchayatSelect.value;
@@ -268,7 +273,7 @@ function applyFilters() {
     }
   }
 
-  renderTable(records);
+  renderTable(records, useExcelTotal);
 }
 
 function getDisplayColumns(records) {
@@ -440,7 +445,6 @@ function getCellValue(record, spec, totalCol) {
 
   return record[spec.col];
 }
-
 function formatCellValue(value, spec, totalCol) {
   if (spec.type === "calculated_percent") {
     return formatPercent(value);
@@ -534,7 +538,7 @@ function setupHorizontalScrollbar() {
   };
 }
 
-function renderTable(records) {
+function renderTable(records, useExcelTotal = false) {
   boothTable.innerHTML = "";
 
   if (!records.length) {
@@ -544,14 +548,23 @@ function renderTable(records) {
 
   const viewMode = valueViewSelect.value;
 
-  resultCount.textContent = `${records.length} booth(s) found.`;
-
   const columns = getDisplayColumns(records);
   const totalCol = getTotalColumn(columns);
   const candidatePairs = getCandidatePairs(columns);
 
   const displaySpec = buildDisplaySpec(columns, candidatePairs, totalCol, viewMode);
-  const totalRow = buildTotalRow(records, displaySpec, candidatePairs, totalCol);
+
+  let displayRecords = records;
+  let totalRow;
+
+  if (useExcelTotal) {
+    totalRow = records[records.length - 1];
+    displayRecords = records.slice(0, -1);
+  } else {
+    totalRow = buildTotalRow(records, displaySpec, candidatePairs, totalCol);
+  }
+
+  resultCount.textContent = `${displayRecords.length} booth(s) found.`;
 
   const thead = document.createElement("thead");
   const headerRow = document.createElement("tr");
@@ -568,7 +581,7 @@ function renderTable(records) {
 
   const tbody = document.createElement("tbody");
 
-  records.forEach(record => {
+  displayRecords.forEach(record => {
     const tr = document.createElement("tr");
 
     displaySpec.forEach(spec => {
@@ -590,7 +603,18 @@ function renderTable(records) {
 
   displaySpec.forEach(spec => {
     const td = document.createElement("td");
-    const value = totalRow[spec.header];
+
+    let value;
+
+    if (useExcelTotal) {
+      if (spec.type === "calculated_percent") {
+        value = getCellValue(totalRow, spec, totalCol);
+      } else {
+        value = totalRow[spec.col];
+      }
+    } else {
+      value = totalRow[spec.header];
+    }
 
     if (spec.type === "calculated_percent") {
       td.textContent = formatPercent(value);
