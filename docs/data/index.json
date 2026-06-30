@@ -2,581 +2,697 @@
   {
     "ac_no": 32,
     "assembly": "Karandighi",
+    "district": "UttarDinajpur",
     "file": "data/assemblies/32-karandighi.json"
   },
   {
     "ac_no": 38,
     "assembly": "Kumargunj",
+    "district": "DakshinDinajpur",
     "file": "data/assemblies/38-kumargunj.json"
   },
   {
     "ac_no": 50,
     "assembly": "Maldah",
+    "district": "Malda",
     "file": "data/assemblies/50-maldah.json"
   },
   {
     "ac_no": 53,
     "assembly": "Sujapur",
+    "district": "Malda",
     "file": "data/assemblies/53-sujapur.json"
   },
   {
     "ac_no": 59,
     "assembly": "Raghunathgunj",
+    "district": "Murshidabad",
     "file": "data/assemblies/59-raghunathgunj.json"
   },
   {
     "ac_no": 60,
     "assembly": "Sagardighi",
+    "district": "Murshidabad",
     "file": "data/assemblies/60-sagardighi.json"
   },
   {
     "ac_no": 61,
     "assembly": "Lalgola",
+    "district": "Murshidabad",
     "file": "data/assemblies/61-lalgola.json"
   },
   {
     "ac_no": 62,
     "assembly": "Bhagwangola",
+    "district": "Murshidabad",
     "file": "data/assemblies/62-bhagwangola.json"
   },
   {
     "ac_no": 63,
     "assembly": "Raninagar",
+    "district": "Murshidabad",
     "file": "data/assemblies/63-raninagar.json"
   },
   {
     "ac_no": 64,
     "assembly": "Murshidabad",
+    "district": "Murshidabad",
     "file": "data/assemblies/64-murshidabad.json"
   },
   {
     "ac_no": 65,
     "assembly": "NABAGRAM",
+    "district": "Murshidabad",
     "file": "data/assemblies/65-nabagram.json"
   },
   {
     "ac_no": 66,
     "assembly": "Khargram",
+    "district": "Murshidabad",
     "file": "data/assemblies/66-khargram.json"
   },
   {
     "ac_no": 70,
     "assembly": "Rejinagar",
+    "district": "Murshidabad",
     "file": "data/assemblies/70-rejinagar.json"
   },
   {
     "ac_no": 73,
     "assembly": "Hariharpara",
+    "district": "Murshidabad",
     "file": "data/assemblies/73-hariharpara.json"
   },
   {
     "ac_no": 75,
     "assembly": "Domkal",
+    "district": "Murshidabad",
     "file": "data/assemblies/75-domkal.json"
   },
   {
     "ac_no": 76,
     "assembly": "Jalangi",
+    "district": "Murshidabad",
     "file": "data/assemblies/76-jalangi.json"
   },
   {
     "ac_no": 77,
     "assembly": "Karimpur",
+    "district": "Nadia",
     "file": "data/assemblies/77-karimpur.json"
   },
   {
     "ac_no": 78,
     "assembly": "Tehatta",
+    "district": "Nadia",
     "file": "data/assemblies/78-tehatta.json"
   },
   {
     "ac_no": 79,
     "assembly": "Palasipara",
+    "district": "Nadia",
     "file": "data/assemblies/79-palasipara.json"
   },
   {
     "ac_no": 80,
     "assembly": "Kaliganj",
+    "district": "Nadia",
     "file": "data/assemblies/80-kaliganj.json"
   },
   {
     "ac_no": 81,
     "assembly": "Nakashipara",
+    "district": "Nadia",
     "file": "data/assemblies/81-nakashipara.json"
   },
   {
     "ac_no": 82,
     "assembly": "Chapra",
+    "district": "Nadia",
     "file": "data/assemblies/82-chapra.json"
   },
   {
     "ac_no": 84,
     "assembly": "Nabadwip",
+    "district": "Nadia",
     "file": "data/assemblies/84-nabadwip.json"
   },
   {
     "ac_no": 92,
     "assembly": "Kalyani",
+    "district": "Nadia",
     "file": "data/assemblies/92-kalyani.json"
   },
   {
     "ac_no": 98,
     "assembly": "Swarupnagar",
+    "district": "North24Pgs",
     "file": "data/assemblies/98-swarupnagar.json"
   },
   {
     "ac_no": 99,
     "assembly": "Baduria",
+    "district": "North24Pgs",
     "file": "data/assemblies/99-baduria.json"
   },
   {
     "ac_no": 100,
     "assembly": "Habra",
+    "district": "North24Pgs",
     "file": "data/assemblies/100-habra.json"
   },
   {
     "ac_no": 101,
     "assembly": "Ashoknagar",
+    "district": "North24Pgs",
     "file": "data/assemblies/101-ashoknagar.json"
   },
   {
     "ac_no": 102,
     "assembly": "Amdanga",
+    "district": "North24Pgs",
     "file": "data/assemblies/102-amdanga.json"
   },
   {
     "ac_no": 103,
     "assembly": "Bijpur",
+    "district": "North24Pgs",
     "file": "data/assemblies/103-bijpur.json"
   },
   {
     "ac_no": 107,
     "assembly": "Noapara",
+    "district": "North24Pgs",
     "file": "data/assemblies/107-noapara.json"
   },
   {
     "ac_no": 108,
     "assembly": "Barrackpur",
+    "district": "North24Pgs",
     "file": "data/assemblies/108-barrackpur.json"
   },
   {
     "ac_no": 109,
     "assembly": "Khardaha",
+    "district": "North24Pgs",
     "file": "data/assemblies/109-khardaha.json"
   },
   {
     "ac_no": 110,
     "assembly": "DumdumUttar",
+    "district": "North24Pgs",
     "file": "data/assemblies/110-dumdumuttar.json"
   },
   {
     "ac_no": 111,
     "assembly": "Panihati",
+    "district": "North24Pgs",
     "file": "data/assemblies/111-panihati.json"
   },
   {
     "ac_no": 112,
     "assembly": "Kamarhati",
+    "district": "North24Pgs",
     "file": "data/assemblies/112-kamarhati.json"
   },
   {
     "ac_no": 113,
     "assembly": "Baranagar",
+    "district": "North24Pgs",
     "file": "data/assemblies/113-baranagar.json"
   },
   {
     "ac_no": 114,
     "assembly": "Dumdum",
+    "district": "North24Pgs",
     "file": "data/assemblies/114-dumdum.json"
   },
   {
     "ac_no": 115,
     "assembly": "RajarhatNewtown",
+    "district": "North24Pgs",
     "file": "data/assemblies/115-rajarhatnewtown.json"
   },
   {
     "ac_no": 116,
     "assembly": "Bidhannagar",
+    "district": "North24Pgs",
     "file": "data/assemblies/116-bidhannagar.json"
   },
   {
     "ac_no": 117,
     "assembly": "RajarhatGopalpur",
+    "district": "North24Pgs",
     "file": "data/assemblies/117-rajarhatgopalpur.json"
   },
   {
     "ac_no": 118,
     "assembly": "Madhyamgram",
+    "district": "North24Pgs",
     "file": "data/assemblies/118-madhyamgram.json"
   },
   {
     "ac_no": 119,
     "assembly": "Barasat",
+    "district": "North24Pgs",
     "file": "data/assemblies/119-barasat.json"
   },
   {
     "ac_no": 120,
     "assembly": "Deganga",
+    "district": "North24Pgs",
     "file": "data/assemblies/120-deganga.json"
   },
   {
     "ac_no": 121,
     "assembly": "Haroa",
+    "district": "North24Pgs",
     "file": "data/assemblies/121-haroa.json"
   },
   {
     "ac_no": 122,
     "assembly": "Minakhan",
+    "district": "North24Pgs",
     "file": "data/assemblies/122-minakhan.json"
   },
   {
     "ac_no": 123,
     "assembly": "Sandeshkhali",
+    "district": "North24Pgs",
     "file": "data/assemblies/123-sandeshkhali.json"
   },
   {
     "ac_no": 124,
     "assembly": "BasirhatDakshin",
+    "district": "North24Pgs",
     "file": "data/assemblies/124-basirhatdakshin.json"
   },
   {
     "ac_no": 125,
     "assembly": "BasirhatUttar",
+    "district": "North24Pgs",
     "file": "data/assemblies/125-basirhatuttar.json"
   },
   {
     "ac_no": 128,
     "assembly": "Basanti",
+    "district": "South24Pgs",
     "file": "data/assemblies/128-basanti.json"
   },
   {
     "ac_no": 133,
     "assembly": "Kulpi",
+    "district": "South24Pgs",
     "file": "data/assemblies/133-kulpi.json"
   },
   {
     "ac_no": 134,
     "assembly": "Raidighi",
+    "district": "South24Pgs",
     "file": "data/assemblies/134-raidighi.json"
   },
   {
     "ac_no": 135,
     "assembly": "Mandirbazar",
+    "district": "South24Pgs",
     "file": "data/assemblies/135-mandirbazar.json"
   },
   {
     "ac_no": 136,
     "assembly": "Jaynagar",
+    "district": "South24Pgs",
     "file": "data/assemblies/136-jaynagar.json"
   },
   {
     "ac_no": 137,
     "assembly": "BaruipurPurba",
+    "district": "South24Pgs",
     "file": "data/assemblies/137-baruipurpurba.json"
   },
   {
     "ac_no": 138,
     "assembly": "CanningPaschim",
+    "district": "South24Pgs",
     "file": "data/assemblies/138-canningpaschim.json"
   },
   {
     "ac_no": 139,
     "assembly": "CanningPurba",
+    "district": "South24Pgs",
     "file": "data/assemblies/139-canningpurba.json"
   },
   {
     "ac_no": 140,
     "assembly": "BaruipurPaschim",
+    "district": "South24Pgs",
     "file": "data/assemblies/140-baruipurpaschim.json"
   },
   {
     "ac_no": 141,
     "assembly": "MagrahatPurba",
+    "district": "South24Pgs",
     "file": "data/assemblies/141-magrahatpurba.json"
   },
   {
     "ac_no": 142,
     "assembly": "MagrahatPaschim",
+    "district": "South24Pgs",
     "file": "data/assemblies/142-magrahatpaschim.json"
   },
   {
     "ac_no": 143,
     "assembly": "DiamondHarbour",
+    "district": "South24Pgs",
     "file": "data/assemblies/143-diamondharbour.json"
   },
   {
     "ac_no": 144,
     "assembly": "Falta",
+    "district": "South24Pgs",
     "file": "data/assemblies/144-falta.json"
   },
   {
     "ac_no": 148,
     "assembly": "Bhangar",
+    "district": "South24Pgs",
     "file": "data/assemblies/148-bhangar.json"
   },
   {
     "ac_no": 149,
     "assembly": "Kasba",
+    "district": "South24Pgs",
     "file": "data/assemblies/149-kasba.json"
   },
   {
     "ac_no": 150,
     "assembly": "Jadavpur",
+    "district": "South24Pgs",
     "file": "data/assemblies/150-jadavpur.json"
   },
   {
     "ac_no": 151,
     "assembly": "SonarpurUttar",
+    "district": "South24Pgs",
     "file": "data/assemblies/151-sonarpuruttar.json"
   },
   {
     "ac_no": 152,
     "assembly": "Tollygunj",
+    "district": "South24Pgs",
     "file": "data/assemblies/152-tollygunj.json"
   },
   {
     "ac_no": 153,
     "assembly": "BehalaPurba",
+    "district": "South24Pgs",
     "file": "data/assemblies/153-behalapurba.json"
   },
   {
     "ac_no": 154,
     "assembly": "BehalaPaschim",
+    "district": "South24Pgs",
     "file": "data/assemblies/154-behalapaschim.json"
   },
   {
     "ac_no": 155,
     "assembly": "Maheshtala",
+    "district": "South24Pgs",
     "file": "data/assemblies/155-maheshtala.json"
   },
   {
     "ac_no": 164,
     "assembly": "Beleghata",
+    "district": "Kolkata",
     "file": "data/assemblies/164-beleghata.json"
   },
   {
     "ac_no": 168,
     "assembly": "KashipurBelgachi",
+    "district": "Kolkata",
     "file": "data/assemblies/168-kashipurbelgachi.json"
   },
   {
     "ac_no": 169,
     "assembly": "Bally",
+    "district": "Howrah",
     "file": "data/assemblies/169-bally.json"
   },
   {
     "ac_no": 171,
     "assembly": "HowrahMadhya",
+    "district": "Howrah",
     "file": "data/assemblies/171-howrahmadhya.json"
   },
   {
     "ac_no": 172,
     "assembly": "Shibpur",
+    "district": "Howrah",
     "file": "data/assemblies/172-shibpur.json"
   },
   {
     "ac_no": 173,
     "assembly": "HowrahDakshin",
+    "district": "Howrah",
     "file": "data/assemblies/173-howrahdakshin.json"
   },
   {
     "ac_no": 174,
     "assembly": "Sankrail",
+    "district": "Howrah",
     "file": "data/assemblies/174-sankrail.json"
   },
   {
     "ac_no": 175,
     "assembly": "Panchla",
+    "district": "Howrah",
     "file": "data/assemblies/175-panchla.json"
   },
   {
     "ac_no": 176,
     "assembly": "UluberiaPurba",
+    "district": "Howrah",
     "file": "data/assemblies/176-uluberiapurba.json"
   },
   {
     "ac_no": 177,
     "assembly": "UluberiaUttar",
+    "district": "Howrah",
     "file": "data/assemblies/177-uluberiauttar.json"
   },
   {
     "ac_no": 178,
     "assembly": "UluberiaDakshin",
+    "district": "Howrah",
     "file": "data/assemblies/178-uluberiadakshin.json"
   },
   {
     "ac_no": 180,
     "assembly": "Bagnan",
+    "district": "Howrah",
     "file": "data/assemblies/180-bagnan.json"
   },
   {
     "ac_no": 181,
     "assembly": "Amta",
+    "district": "Howrah",
     "file": "data/assemblies/181-amta.json"
   },
   {
     "ac_no": 183,
     "assembly": "Jagatballavpur",
+    "district": "Howrah",
     "file": "data/assemblies/183-jagatballavpur.json"
   },
   {
     "ac_no": 184,
     "assembly": "Domjur",
+    "district": "Howrah",
     "file": "data/assemblies/184-domjur.json"
   },
   {
     "ac_no": 185,
     "assembly": "Uttarpara",
+    "district": "Hoogly",
     "file": "data/assemblies/185-uttarpara.json"
   },
   {
     "ac_no": 186,
     "assembly": "Sreerampur",
+    "district": "Hoogly",
     "file": "data/assemblies/186-sreerampur.json"
   },
   {
     "ac_no": 187,
     "assembly": "Champdani",
+    "district": "Hoogly",
     "file": "data/assemblies/187-champdani.json"
   },
   {
     "ac_no": 189,
     "assembly": "Chandannagar",
+    "district": "Hoogly",
     "file": "data/assemblies/189-chandannagar.json"
   },
   {
     "ac_no": 192,
     "assembly": "Pandua",
+    "district": "Hoogly",
     "file": "data/assemblies/192-pandua.json"
   },
   {
     "ac_no": 194,
     "assembly": "Chanditala",
+    "district": "Hoogly",
     "file": "data/assemblies/194-chanditala.json"
   },
   {
     "ac_no": 195,
     "assembly": "Jangipara",
+    "district": "Hoogly",
     "file": "data/assemblies/195-jangipara.json"
   },
   {
     "ac_no": 209,
     "assembly": "Haldia",
+    "district": "PurbaMedinipur",
     "file": "data/assemblies/209-haldia.json"
   },
   {
     "ac_no": 210,
     "assembly": "Nandigram",
+    "district": "PurbaMedinipur",
     "file": "data/assemblies/210-nandigram.json"
   },
   {
     "ac_no": 233,
     "assembly": "Garbeta",
+    "district": "PaschimMedinipur",
     "file": "data/assemblies/233-garbeta.json"
   },
   {
     "ac_no": 251,
     "assembly": "Taldangra",
+    "district": "Bankura",
     "file": "data/assemblies/251-taldangra.json"
   },
   {
     "ac_no": 259,
     "assembly": "Khandaghosh",
+    "district": "Bardhaman",
     "file": "data/assemblies/259-khandaghosh.json"
   },
   {
     "ac_no": 260,
     "assembly": "BardhamanDakshin",
+    "district": "Bardhaman",
     "file": "data/assemblies/260-bardhamandakshin.json"
   },
   {
     "ac_no": 261,
     "assembly": "Raina",
+    "district": "Bardhaman",
     "file": "data/assemblies/261-raina.json"
   },
   {
     "ac_no": 262,
     "assembly": "Jamalpur",
+    "district": "Bardhaman",
     "file": "data/assemblies/262-jamalpur.json"
   },
   {
     "ac_no": 263,
     "assembly": "Monteshwar",
+    "district": "Bardhaman",
     "file": "data/assemblies/263-monteshwar.json"
   },
   {
     "ac_no": 264,
     "assembly": "Kalna",
+    "district": "Bardhaman",
     "file": "data/assemblies/264-kalna.json"
   },
   {
     "ac_no": 265,
     "assembly": "Memari",
+    "district": "Bardhaman",
     "file": "data/assemblies/265-memari.json"
   },
   {
     "ac_no": 266,
     "assembly": "BardhamanUttar",
+    "district": "Bardhaman",
     "file": "data/assemblies/266-bardhamanuttar.json"
   },
   {
     "ac_no": 267,
     "assembly": "Bhatar",
+    "district": "Bardhaman",
     "file": "data/assemblies/267-bhatar.json"
   },
   {
     "ac_no": 269,
     "assembly": "PurbasthaliUttar",
+    "district": "Bardhaman",
     "file": "data/assemblies/269-purbasthaliuttar.json"
   },
   {
     "ac_no": 270,
     "assembly": "Katwa",
+    "district": "Bardhaman",
     "file": "data/assemblies/270-katwa.json"
   },
   {
     "ac_no": 272,
     "assembly": "Mongalkot",
+    "district": "Bardhaman",
     "file": "data/assemblies/272-mongalkot.json"
   },
   {
     "ac_no": 273,
     "assembly": "Ausgram",
+    "district": "Bardhaman",
     "file": "data/assemblies/273-ausgram.json"
   },
   {
     "ac_no": 274,
     "assembly": "Galsi",
+    "district": "Bardhaman",
     "file": "data/assemblies/274-galsi.json"
   },
   {
     "ac_no": 276,
     "assembly": "DurgapurPurba",
+    "district": "Bardhaman",
     "file": "data/assemblies/276-durgapurpurba.json"
   },
   {
     "ac_no": 278,
     "assembly": "Raniganj",
+    "district": "Bardhaman",
     "file": "data/assemblies/278-raniganj.json"
   },
   {
     "ac_no": 279,
     "assembly": "Jamuria",
+    "district": "Bardhaman",
     "file": "data/assemblies/279-jamuria.json"
   },
   {
     "ac_no": 286,
     "assembly": "Bolpur",
+    "district": "Birbhum",
     "file": "data/assemblies/286-bolpur.json"
   },
   {
     "ac_no": 291,
     "assembly": "Rampurhat",
+    "district": "Birbhum",
     "file": "data/assemblies/291-rampurhat.json"
   },
   {
     "ac_no": 292,
     "assembly": "Hansan",
+    "district": "Birbhum",
     "file": "data/assemblies/292-hansan.json"
   }
 ]

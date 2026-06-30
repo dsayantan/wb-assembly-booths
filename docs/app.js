@@ -2,11 +2,7 @@ let assemblies = [];
 let currentData = null;
 let currentRecords = [];
 
-
-const tableWrapper = document.getElementById("tableWrapper");
-const topScroll = document.getElementById("topScroll");
-const topScrollInner = document.getElementById("topScrollInner");
-
+const districtSelect = document.getElementById("districtSelect");
 const assemblySelect = document.getElementById("assemblySelect");
 const modeSelect = document.getElementById("modeSelect");
 const valueViewSelect = document.getElementById("valueViewSelect");
@@ -21,6 +17,9 @@ const wardBox = document.getElementById("wardBox");
 
 const boothTable = document.getElementById("boothTable");
 const resultCount = document.getElementById("resultCount");
+const tableWrapper = document.getElementById("tableWrapper");
+const topScroll = document.getElementById("topScroll");
+const topScrollInner = document.getElementById("topScrollInner");
 
 async function loadIndex() {
   try {
@@ -32,24 +31,71 @@ async function loadIndex() {
 
     assemblies = await res.json();
 
-    assemblySelect.innerHTML = "";
-
-    assemblies.forEach((asm, index) => {
-      const option = document.createElement("option");
-      option.value = index;
-      option.textContent = `${asm.ac_no} - ${asm.assembly}`;
-      assemblySelect.appendChild(option);
+    assemblies.sort((a, b) => {
+      return Number(a.ac_no) - Number(b.ac_no);
     });
 
-    if (assemblies.length > 0) {
-      await loadAssembly(0);
-    } else {
-      resultCount.textContent = "No assemblies found.";
-    }
+    populateDistricts();
 
   } catch (error) {
     console.error(error);
     resultCount.textContent = "Error loading assembly index. Check docs/data/index.json.";
+    boothTable.innerHTML = "";
+  }
+}
+
+function populateDistricts() {
+  const districts = [
+    ...new Set(
+      assemblies.map(asm => {
+        const district = asm.district || "Unknown District";
+        return String(district).trim() || "Unknown District";
+      })
+    )
+  ].sort((a, b) => String(a).localeCompare(String(b)));
+
+  districtSelect.innerHTML = "";
+
+  districts.forEach(district => {
+    const option = document.createElement("option");
+    option.value = district;
+    option.textContent = district;
+    districtSelect.appendChild(option);
+  });
+
+  if (districts.length > 0) {
+    populateAssembliesForDistrict(districts[0]);
+  } else {
+    resultCount.textContent = "No districts found.";
+    boothTable.innerHTML = "";
+  }
+}
+
+function populateAssembliesForDistrict(district) {
+  const filteredAssemblies = assemblies
+    .map((asm, index) => ({ ...asm, originalIndex: index }))
+    .filter(asm => {
+      const asmDistrict = String(asm.district || "Unknown District").trim() || "Unknown District";
+      return asmDistrict === district;
+    })
+    .sort((a, b) => Number(a.ac_no) - Number(b.ac_no));
+
+  assemblySelect.innerHTML = "";
+
+  filteredAssemblies.forEach(asm => {
+    const option = document.createElement("option");
+    option.value = asm.originalIndex;
+    option.textContent = `${asm.ac_no} - ${asm.assembly}`;
+    assemblySelect.appendChild(option);
+  });
+
+  if (filteredAssemblies.length > 0) {
+    loadAssembly(filteredAssemblies[0].originalIndex);
+  } else {
+    currentData = null;
+    currentRecords = [];
+    boothTable.innerHTML = "";
+    resultCount.textContent = "No assemblies found for this district.";
   }
 }
 
@@ -232,19 +278,6 @@ function getTotalColumn(columns) {
   return columns.find(col => isTotalColumn(col));
 }
 
-/*
-  Important rule based on your Excel structure:
-
-  If a column header contains %, that column is the original Excel percentage column.
-  The next column is the actual vote column for that candidate.
-
-  Example:
-  BJP %   → original percentage column, ignored
-  BJP     → actual vote column, used for calculation
-
-  TMC %   → original percentage column, ignored
-  TMC     → actual vote column, used for calculation
-*/
 function getCandidatePairs(columns) {
   const pairs = [];
 
@@ -313,13 +346,6 @@ function buildDisplaySpec(columns, candidatePairs, totalCol, viewMode) {
     }
 
     if (viewMode === "actual") {
-      /*
-        Actual Votes view:
-        - Hide original Excel % columns.
-        - Show actual vote columns.
-        - Show Total column.
-        - Show Municipality, Ward, Panchayat columns.
-      */
       if (isOriginalPercentColumn(col)) {
         return;
       }
@@ -334,12 +360,6 @@ function buildDisplaySpec(columns, candidatePairs, totalCol, viewMode) {
     }
 
     if (viewMode === "percent") {
-      /*
-        Percentage Votes view:
-        - Hide original Excel actual vote columns.
-        - Use original % column headers.
-        - Recalculate percentages live from actual vote columns.
-      */
       if (isOriginalPercentColumn(col)) {
         const pair = pairByPercentCol.get(col);
 
@@ -470,16 +490,13 @@ function getColumnClass(spec, totalCol) {
   return "col-normal";
 }
 
-
 function setupHorizontalScrollbar() {
   if (!tableWrapper || !topScroll || !topScrollInner || !boothTable) {
     return;
   }
 
-  // Make the fake scrollbar as wide as the real table
   topScrollInner.style.width = boothTable.scrollWidth + "px";
 
-  // Show top scrollbar only if table is wider than the visible area
   if (boothTable.scrollWidth > tableWrapper.clientWidth) {
     topScroll.style.display = "block";
   } else {
@@ -578,9 +595,13 @@ function renderTable(records) {
 
   tbody.appendChild(totalTr);
   boothTable.appendChild(tbody);
-  setTimeout(setupHorizontalScrollbar, 0);
 
+  setTimeout(setupHorizontalScrollbar, 0);
 }
+
+districtSelect.addEventListener("change", () => {
+  populateAssembliesForDistrict(districtSelect.value);
+});
 
 assemblySelect.addEventListener("change", async () => {
   await loadAssembly(assemblySelect.value);
@@ -601,5 +622,9 @@ municipalitySelect.addEventListener("change", () => {
 });
 
 wardSelect.addEventListener("change", applyFilters);
+
+window.addEventListener("resize", () => {
+  setTimeout(setupHorizontalScrollbar, 0);
+});
 
 loadIndex();

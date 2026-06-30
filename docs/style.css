@@ -32,8 +32,6 @@ h1 {
   font-size: 15px;
 }
 
-/* FILTER AREA */
-
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -74,8 +72,6 @@ select {
   color: #1f2937;
 }
 
-/* TOP HORIZONTAL SCROLLBAR */
-
 .top-scroll {
   width: 100%;
   max-width: 100%;
@@ -113,8 +109,6 @@ select {
   background: #374151;
 }
 
-/* TABLE WRAPPER */
-
 .table-wrapper {
   width: 100%;
   max-width: 100%;
@@ -148,8 +142,6 @@ select {
   background: #374151;
 }
 
-/* TABLE */
-
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -179,8 +171,6 @@ th {
   white-space: normal;
   line-height: 1.2;
 }
-
-/* COLUMN WIDTHS */
 
 .col-normal {
   width: 76px;
@@ -228,15 +218,11 @@ td.col-booth-name:hover {
   background: #fff7ed;
 }
 
-/* TOTAL ROW */
-
 .total-row td {
   font-weight: bold;
   background: #fef3c7;
   border-top: 2px solid #111827;
 }
-
-/* MOBILE VIEW - KEEP TABULAR FORMAT */
 
 @media (max-width: 768px) {
   body {
