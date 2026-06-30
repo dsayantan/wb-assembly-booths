@@ -17,6 +17,7 @@ const wardBox = document.getElementById("wardBox");
 
 const boothTable = document.getElementById("boothTable");
 const resultCount = document.getElementById("resultCount");
+const loadedAssemblyTitle = document.getElementById("loadedAssemblyTitle");
 const tableWrapper = document.getElementById("tableWrapper");
 const topScroll = document.getElementById("topScroll");
 const topScrollInner = document.getElementById("topScrollInner");
@@ -111,6 +112,10 @@ async function loadAssembly(index) {
 
     currentData = await res.json();
     currentRecords = currentData.records || [];
+
+    if (loadedAssemblyTitle) {
+      loadedAssemblyTitle.textContent = `${currentData.ac_no} - ${currentData.assembly}`;
+    }
 
     populateFilters();
     applyFilters();
@@ -470,13 +475,19 @@ function getColumnClass(spec, totalCol) {
     return "col-booth-name";
   }
 
+  if (header.includes("ward")) {
+    return "col-ward";
+  }
+
+  if (header.includes("municipality")) {
+    return "col-municipality";
+  }
+
   if (
-    header.includes("municipality") ||
     header.includes("panchayat") ||
-    header.includes("ward") ||
     header.includes("gp")
   ) {
-    return "col-area";
+    return "col-panchayat";
   }
 
   if (spec.type === "calculated_percent") {
