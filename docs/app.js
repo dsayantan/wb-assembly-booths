@@ -2,6 +2,16 @@ let assemblies = [];
 let currentData = null;
 let currentRecords = [];
 
+const partyFilterType = document.getElementById("partyFilterType");
+const minPercentBox = document.getElementById("minPercentBox");
+const maxPercentBox = document.getElementById("maxPercentBox");
+const rankBox = document.getElementById("rankBox");
+const rankInput = document.getElementById("rankInput");
+
+const partySelect = document.getElementById("partySelect");
+const minPercentInput = document.getElementById("minPercentInput");
+const maxPercentInput = document.getElementById("maxPercentInput");
+
 const districtSelect = document.getElementById("districtSelect");
 const assemblySelect = document.getElementById("assemblySelect");
 const modeSelect = document.getElementById("modeSelect");
@@ -214,11 +224,79 @@ function fillSelect(select, values, includeAll = true) {
     select.appendChild(option);
   });
 }
+
 function populateFilters() {
   fillSelect(panchayatSelect, uniqueValues(currentRecords, "_panchayat"));
   fillSelect(municipalitySelect, uniqueValues(currentRecords, "_municipality"));
+  populatePartyDropdown();
   updateWardOptions();
   updateFilterVisibility();
+}
+
+function updatePartyFilterVisibility() {
+  if (partyFilterType.value === "rank") {
+    minPercentBox.style.display = "none";
+    maxPercentBox.style.display = "none";
+    rankBox.style.display = "flex";
+  } else {
+    minPercentBox.style.display = "flex";
+    maxPercentBox.style.display = "flex";
+    rankBox.style.display = "none";
+  }
+}
+
+function clampRankInput(input) {
+  let value = input.value;
+
+  if (value === "") {
+    return;
+  }
+
+  value = Number(value);
+
+  if (!Number.isInteger(value)) {
+    value = Math.round(value);
+  }
+
+  if (value < 1) {
+    value = 1;
+  }
+
+  input.value = value;
+}
+
+function getPartyRankForRow(row, partyVoteCol, candidatePairs) {
+  const partyVotes = toNumber(row[partyVoteCol]);
+
+  const voteList = candidatePairs
+    .map(pair => toNumber(row[pair.voteCol]))
+    .sort((a, b) => b - a);
+
+  const higherVotesCount = voteList.filter(votes => votes > partyVotes).length;
+
+  return higherVotesCount + 1;
+}
+
+function applyPartyRankFilter(records, candidatePairs) {
+  const partyVoteCol = partySelect.value;
+
+  if (!partyVoteCol) {
+    return records;
+  }
+
+  let rankValue = rankInput.value === "" ? 1 : Number(rankInput.value);
+
+  if (!Number.isFinite(rankValue)) {
+    rankValue = 1;
+  }
+
+  rankValue = Math.max(1, Math.round(rankValue));
+  rankInput.value = rankValue;
+
+  return records.filter(row => {
+    const rank = getPartyRankForRow(row, partyVoteCol, candidatePairs);
+    return rank === rankValue;
+  });
 }
 
 function updateWardOptions() {
@@ -273,6 +351,20 @@ function applyFilters() {
     }
   }
 
+  const columns = getDisplayColumns(records);
+  const totalCol = getTotalColumn(columns);
+  const candidatePairs = getCandidatePairs(columns);
+
+
+  if (partySelect.value) {
+    if (partyFilterType.value === "rank") {
+      records = applyPartyRankFilter(records, candidatePairs);
+    } else {
+      records = applyPartyPercentFilter(records, totalCol);
+    }
+
+    useExcelTotal = false;
+  }
   renderTable(records, useExcelTotal);
 }
 
@@ -323,6 +415,119 @@ function getCandidatePairs(columns) {
   }
 
   return pairs;
+}
+
+function populatePartyDropdown() {
+  const columns = getDisplayColumns(currentRecords);
+  const candidatePairs = getCandidatePairs(columns);
+
+  partySelect.innerHTML = "";
+
+  const allOption = document.createElement("option");
+  allOption.value = "";
+  allOption.textContent = "All Parties";
+  partySelect.appendChild(allOption);
+
+  candidatePairs.forEach(pair => {
+    const option = document.createElement("option");
+    option.value = pair.voteCol;
+    option.textContent = pair.voteCol;
+    partySelect.appendChild(option);
+  });
+}
+
+function clampPercentInput(input) {
+  let value = input.value;
+
+  if (value === "") {
+    return;
+  }
+
+  value = Number(value);
+
+  if (!Number.isInteger(value)) {
+    value = Math.round(value);
+  }
+
+  if (value < 0) {
+    value = 0;
+  }
+
+  if (value > 100) {
+    value = 100;
+  }
+
+  input.value = value;
+}
+
+function getPartyPercentForRow(row, partyVoteCol, totalCol) {
+  const partyVotes = toNumber(row[partyVoteCol]);
+  const totalVotes = toNumber(row[totalCol]);
+
+  if (!totalVotes || totalVotes <= 0) {
+    return null;
+  }
+
+  return (partyVotes / totalVotes) * 100;
+}
+
+function applyPartyPercentFilter(records, totalCol) {
+  const partyVoteCol = partySelect.value;
+
+  if (!partyVoteCol) {
+    return records;
+  }
+
+  let minValue = minPercentInput.value === "" ? 0 : Number(minPercentInput.value);
+  let maxValue = maxPercentInput.value === "" ? 100 : Number(maxPercentInput.value);
+
+  if (!Number.isFinite(minValue)) {
+    minValue = 0;
+  }
+
+  if (!Number.isFinite(maxValue)) {
+    maxValue = 100;
+  }
+
+  minValue = Math.max(0, Math.min(100, Math.round(minValue)));
+  maxValue = Math.max(0, Math.min(100, Math.round(maxValue)));
+
+  if (minValue > maxValue) {
+    const temp = minValue;
+    minValue = maxValue;
+    maxValue = temp;
+  }
+
+  minPercentInput.value = minValue;
+  maxPercentInput.value = maxValue;
+
+  return records.filter(row => {
+    const percent = getPartyPercentForRow(row, partyVoteCol, totalCol);
+
+    if (percent === null) {
+      return false;
+    }
+
+    return percent >= minValue && percent <= maxValue;
+  });
+}
+
+function getPartyFilterMessage() {
+  const partyVoteCol = partySelect.value;
+
+  if (!partyVoteCol) {
+    return "";
+  }
+
+  if (partyFilterType.value === "rank") {
+    const rankValue = rankInput.value === "" ? 1 : Number(rankInput.value);
+    return ` Showing booths where ${partyVoteCol} ranked ${rankValue}.`;
+  }
+
+  const minValue = minPercentInput.value === "" ? 0 : Number(minPercentInput.value);
+  const maxValue = maxPercentInput.value === "" ? 100 : Number(maxPercentInput.value);
+
+  return ` Showing booths where ${partyVoteCol} got between ${minValue}% and ${maxValue}% votes.`;
 }
 
 function sumColumn(records, col) {
@@ -564,7 +769,7 @@ function renderTable(records, useExcelTotal = false) {
     totalRow = buildTotalRow(records, displaySpec, candidatePairs, totalCol);
   }
 
-  resultCount.textContent = `${displayRecords.length} booth(s) found.`;
+  resultCount.textContent = `${displayRecords.length} booth(s) found.${getPartyFilterMessage()}`;
 
   const thead = document.createElement("thead");
   const headerRow = document.createElement("tr");
@@ -658,8 +863,30 @@ municipalitySelect.addEventListener("change", () => {
 
 wardSelect.addEventListener("change", applyFilters);
 
+partySelect.addEventListener("change", applyFilters);
+
+minPercentInput.addEventListener("input", () => {
+  clampPercentInput(minPercentInput);
+  applyFilters();
+});
+
+maxPercentInput.addEventListener("input", () => {
+  clampPercentInput(maxPercentInput);
+  applyFilters();
+});
+
+partyFilterType.addEventListener("change", () => {
+  updatePartyFilterVisibility();
+  applyFilters();
+});
+
+rankInput.addEventListener("change", applyFilters);
+
 window.addEventListener("resize", () => {
   setTimeout(setupHorizontalScrollbar, 0);
 });
 
 loadIndex();
+updatePartyFilterVisibility();
+
+

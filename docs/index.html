@@ -44,6 +44,42 @@
       </select>
     </label>
 
+    <label>
+      Party
+      <select id="partySelect">
+        <option value="">All Parties</option>
+      </select>
+    </label>
+
+   <label>
+     Filter By
+     <select id="partyFilterType">
+       <option value="percent">Percentage Range</option>
+       <option value="rank">Rank</option>
+     </select>
+   </label>
+
+    <label id="minPercentBox">
+      Min %
+      <input id="minPercentInput" type="number" min="0" max="100" step="1" placeholder="0">
+    </label>
+    
+    <label id="maxPercentBox">
+      Max %
+      <input id="maxPercentInput" type="number" min="0" max="100" step="1" placeholder="100">
+    </label>
+
+    <label id="rankBox" style="display:none;">
+      Rank
+      <select id="rankInput">
+        <option value="1">1st</option>
+        <option value="2">2nd</option>
+        <option value="3">3rd</option>
+        <option value="4">4th</option>
+        <option value="5">5th</option>
+      </select>
+    </label>
+
     <label id="panchayatBox">
       Panchayat / GP
       <select id="panchayatSelect"></select>
