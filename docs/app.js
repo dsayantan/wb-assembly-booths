@@ -356,16 +356,30 @@ function applyFilters() {
   const candidatePairs = getCandidatePairs(columns);
 
 
+  let hideTotalRow = false;
+
   if (partySelect.value) {
+
+    /*
+      If Party filter is selected, remove the Excel Total row first.
+      Otherwise the last Total row may appear as a normal booth row.
+    */
+    if (mode === "all" && records.length > 0) {
+      records = records.slice(0, -1);
+    }
+
     if (partyFilterType.value === "rank") {
       records = applyPartyRankFilter(records, candidatePairs);
     } else {
       records = applyPartyPercentFilter(records, totalCol);
     }
 
+    hideTotalRow = true;
     useExcelTotal = false;
   }
-  renderTable(records, useExcelTotal);
+
+  renderTable(records, useExcelTotal, hideTotalRow);
+
 }
 
 function getDisplayColumns(records) {
@@ -743,7 +757,7 @@ function setupHorizontalScrollbar() {
   };
 }
 
-function renderTable(records, useExcelTotal = false) {
+function renderTable(records, useExcelTotal = false, hideTotalRow = false) {
   boothTable.innerHTML = "";
 
   if (!records.length) {
@@ -803,37 +817,47 @@ function renderTable(records, useExcelTotal = false) {
     tbody.appendChild(tr);
   });
 
-  const totalTr = document.createElement("tr");
-  totalTr.classList.add("total-row");
+  if (!hideTotalRow) {
 
-  displaySpec.forEach(spec => {
-    const td = document.createElement("td");
+    const totalTr = document.createElement("tr");
+    totalTr.classList.add("total-row");
 
-    let value;
+    displaySpec.forEach(spec => {
 
-    if (useExcelTotal) {
-      if (spec.type === "calculated_percent") {
-        value = getCellValue(totalRow, spec, totalCol);
-      } else {
-        value = totalRow[spec.col];
-      }
-    } else {
-      value = totalRow[spec.header];
-    }
+        const td = document.createElement("td");
 
-    if (spec.type === "calculated_percent") {
-      td.textContent = formatPercent(value);
-    } else {
-      td.textContent = formatCellValue(value, spec, totalCol);
-    }
+        let value;
 
-    td.setAttribute("data-label", spec.header);
-    td.classList.add(getColumnClass(spec, totalCol));
+        if (useExcelTotal) {
 
-    totalTr.appendChild(td);
-  });
+            if (spec.type === "calculated_percent") {
+                value = getCellValue(totalRow, spec, totalCol);
+            } else {
+                value = totalRow[spec.col];
+            }
 
-  tbody.appendChild(totalTr);
+        } else {
+
+            value = totalRow[spec.header];
+
+        }
+
+        if (spec.type === "calculated_percent") {
+            td.textContent = formatPercent(value);
+        } else {
+            td.textContent = formatCellValue(value, spec, totalCol);
+        }
+
+        td.setAttribute("data-label", spec.header);
+        td.classList.add(getColumnClass(spec, totalCol));
+
+        totalTr.appendChild(td);
+
+    });
+
+    tbody.appendChild(totalTr);
+
+  }
   boothTable.appendChild(tbody);
 
   setTimeout(setupHorizontalScrollbar, 0);
