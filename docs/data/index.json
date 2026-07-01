@@ -294,6 +294,12 @@
     "file": "data/assemblies/125-basirhatuttar.json"
   },
   {
+    "ac_no": 126,
+    "assembly": "Hingalganj",
+    "district": "North24Pgs",
+    "file": "data/assemblies/126-hingalganj.json"
+  },
+  {
     "ac_no": 128,
     "assembly": "Basanti",
     "district": "South24Pgs",
@@ -370,6 +376,12 @@
     "assembly": "Falta",
     "district": "South24Pgs",
     "file": "data/assemblies/144-falta.json"
+  },
+  {
+    "ac_no": 147,
+    "assembly": "SonarpurDakshin",
+    "district": "South24Pgs",
+    "file": "data/assemblies/147-sonarpurdakshin.json"
   },
   {
     "ac_no": 148,
@@ -576,6 +588,12 @@
     "file": "data/assemblies/251-taldangra.json"
   },
   {
+    "ac_no": 253,
+    "assembly": "Barjora",
+    "district": "Bankura",
+    "file": "data/assemblies/253-barjora.json"
+  },
+  {
     "ac_no": 259,
     "assembly": "Khandaghosh",
     "district": "Bardhaman",
@@ -664,6 +682,12 @@
     "assembly": "DurgapurPurba",
     "district": "Bardhaman",
     "file": "data/assemblies/276-durgapurpurba.json"
+  },
+  {
+    "ac_no": 277,
+    "assembly": "DurgapurPaschim",
+    "district": "Bardhaman",
+    "file": "data/assemblies/277-durgapurpaschim.json"
   },
   {
     "ac_no": 278,
